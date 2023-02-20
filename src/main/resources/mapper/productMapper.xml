@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hjt.course01.dao.ProductMapper">
+    <resultMap id="BaseResultMap" type="com.hjt.course01.entity.Product">
+        <id column="id" jdbcType="INTEGER" property="id" />
+        <result column="name" jdbcType="VARCHAR" property="name" />
+        <result column="price" jdbcType="FLOAT" property="price" />
+        <result column="cid" jdbcType="INTEGER" property="cid" />
+    </resultMap>
+
+    <select id="getProductByName" resultType="Map" parameterType="String">
+        select * from product_ where name = #{name}
+    </select>
+</mapper>
