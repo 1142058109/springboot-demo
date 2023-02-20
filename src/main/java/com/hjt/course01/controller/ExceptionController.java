@@ -16,6 +16,7 @@ public class ExceptionController {
 
     @PostMapping("/e1")
     public JsonResult e1(User user ){
+        System.out.println("1");
         int[] ints = new int[10];
 
         try {
